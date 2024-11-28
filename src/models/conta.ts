@@ -1,0 +1,44 @@
+import { Cliente } from './cliente';
+
+export class Conta{
+    private id : number
+    private numero : string;
+    private saldo : number;
+    private cliente : Cliente;
+
+    constructor(id: number, numero: string, saldo: number, cliente: Cliente){
+        this.id = id;
+        this.numero = numero;
+        this.saldo = saldo;
+        this.cliente = cliente;
+    }
+
+    public sacar(valor : number) : void{
+        this.saldo = this.saldo - valor;
+    }
+
+    public depositar(valor : number) : void{
+        this.saldo = this.saldo + valor;
+    }
+
+    public consultarSaldo() : number{
+        return this.saldo;
+    }
+
+    public transferir(contaDestino : Conta, valor : number) : void{
+        this.sacar(valor);
+        contaDestino.depositar(valor);
+    }
+
+    public getNumero() : string{
+        return this.numero;
+    }
+
+    public getId() : number{
+        return this.id;
+    }
+
+    public getCliente() : Cliente{
+        return this.cliente;
+    }
+}
