@@ -5,13 +5,13 @@ export class Banco{
     private contas : Conta[];
     private clientes : Cliente[];
 
-    constructor(){
+    constructor(contas: Conta[] = [], clientes: Cliente[] = []) {
         this.contas = [];
         this.clientes = [];
     }
 
     public consultarConta(numero: string): Conta {
-        let contaProcurada!: Conta;
+        let contaProcurada = new Conta();
         for (let conta of this.contas) {
             if (conta.getNumero() == numero) {
                 contaProcurada = conta;
@@ -21,8 +21,9 @@ export class Banco{
         return contaProcurada;
     }
 
+    //ERRO ESTÁ AQUI
     public consultarCliente(cpf: string): Cliente{
-        let clienteProcurado! : Cliente; // O ponto de exclamação é para dizer que a variável não é nula
+        let clienteProcurado  = new Cliente(); // O ponto de exclamação é para dizer que a variável não é nula
         for(let cliente of this.clientes){
             if(cliente.getCpf() == cpf){
                 clienteProcurado = cliente;
@@ -76,5 +77,13 @@ export class Banco{
             }
         }
         this.contas.push(conta);
+    }
+
+    public getClientes(): Cliente[]{
+        return this.clientes;
+    }
+
+    public getContas(): Conta[]{
+        return this.contas;
     }
 }

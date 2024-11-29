@@ -7,7 +7,8 @@ export class Cliente{
     private dataNascimento : Date;
     private contas : Conta[];
 
-    constructor(id: number, nome: string, cpf: string, dataNascimento: Date){
+    constructor(id: number = 0, nome: string = "", cpf: string = "", dataNascimento: Date = new Date()
+    ,contas: Conta[] = []){
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
@@ -33,5 +34,9 @@ export class Cliente{
 
     public getDataNascimento() : Date {
         return this.dataNascimento;
+    }
+
+    public adicionarConta(conta : Conta) : void{
+        this.contas.push(conta);
     }
 }

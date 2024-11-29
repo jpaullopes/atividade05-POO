@@ -6,7 +6,7 @@ export class Conta{
     private saldo : number;
     private cliente : Cliente;
 
-    constructor(id: number, numero: string, saldo: number, cliente: Cliente){
+    constructor(id: number = 0, numero: string = "", saldo: number = 0, cliente: Cliente = new Cliente()){
         this.id = id;
         this.numero = numero;
         this.saldo = saldo;
