@@ -1,7 +1,7 @@
 # Projeto Banco
 
 ## Descrição
-Este projeto simula um sistema bancário simples com funcionalidades para gerenciar clientes, contas e operações bancárias. O projeto é resulaado de uma atividade acadêmica.
+Este projeto simula um sistema bancário simples com funcionalidades para gerenciar clientes, contas e operações bancárias. O projeto é resultado de uma atividade acadêmica.
 
 ## Estrutura do Projeto
 - **Classe Cliente**: Representa um cliente do banco.
