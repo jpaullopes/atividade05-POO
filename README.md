@@ -1,87 +1,28 @@
-# Projeto Banco
+# Projetos Acadêmicos
 
-## Descrição
-Este projeto simula um sistema bancário simples com funcionalidades para gerenciar clientes, contas e operações bancárias. O projeto é resulaado de uma atividade acadêmica.
+Este repositório contém dois projetos desenvolvidos como parte de atividades acadêmicas. Ambos os projetos são implementações simples em TypeScript para fins educacionais.
 
-## Estrutura do Projeto
-- **Classe Cliente**: Representa um cliente do banco.
-- **Classe Conta**: Representa uma conta bancária.
-- **Classe Banco**: Centraliza a gestão de clientes e contas, além de realizar operações bancárias.
+## [Projeto Banco](./banco/README.md)
 
-## Questões
+### Descrição
+Este projeto simula um sistema bancário simples com funcionalidades para gerenciar clientes, contas e operações bancárias. O objetivo é demonstrar conceitos de programação orientada a objetos e manipulação de dados.
 
-### Questão 01
-**Classe Cliente**
-A classe `Cliente` representa um cliente do banco e possui os seguintes atributos e métodos:
+### Funcionalidades
+- Gerenciamento de clientes e contas bancárias.
+- Operações bancárias como saque, depósito e transferência.
+- Associação de contas a clientes e totalização de saldos.
 
-#### Atributos
-- `id`: Identificador único do cliente.
-- `nome`: Nome do cliente.
-- `cpf`: CPF do cliente.
-- `dataNascimento`: Data de nascimento do cliente.
-- `contas`: Lista de contas associadas ao cliente.
+## [Projeto Microblog](./miniblog/README.md)
 
-#### Métodos
-- `getCpf()`: Retorna o CPF do cliente.
-- `getContas()`: Retorna a lista de contas do cliente.
-- `getId()`: Retorna o ID do cliente.
-- `getNome()`: Retorna o nome do cliente.
-- `getDataNascimento()`: Retorna a data de nascimento do cliente.
-- `adicionarConta(conta: Conta)`: Adiciona uma conta à lista de contas do cliente.
+### Descrição
+Este projeto cria um sistema simples de microblogging onde os usuários podem criar postagens, curtir postagens e gerenciar um conjunto de postagens. O objetivo é praticar a criação e manipulação de classes e métodos em TypeScript.
 
-### Questão 02
-**Classe Conta**
-A classe `Conta` representa uma conta bancária e possui os seguintes atributos e métodos:
+### Funcionalidades
+- Criação e gerenciamento de postagens.
+- Incremento de curtidas em postagens.
+- Busca e exclusão de postagens.
 
-#### Atributos
-- `id`: Identificador único da conta.
-- `numero`: Número da conta.
-- `saldo`: Saldo da conta.
-- `cliente`: Cliente associado à conta.
+## Conclusão
+Estes projetos foram desenvolvidos como parte de atividades acadêmicas e têm fins educacionais. Eles demonstram o uso de classes, métodos e operações básicas em TypeScript. Para projetos mais complexos, seria necessário adicionar mais funcionalidades, como validações, tratamento de erros, persistência de dados, interface gráfica, etc.
 
-#### Métodos
-- `sacar(valor: number)`: Realiza um saque na conta.
-- `depositar(valor: number)`: Realiza um depósito na conta.
-- `consultarSaldo()`: Retorna o saldo da conta.
-- `transferir(contaDestino: Conta, valor: number)`: Transfere um valor para outra conta.
-- `getNumero()`: Retorna o número da conta.
-- `getId()`: Retorna o ID da conta.
-- `getCliente()`: Retorna o cliente associado à conta.
-
-### Questão 03
-**Classe Banco**
-A classe `Banco` centraliza a gestão de clientes e contas, além de realizar operações bancárias. Possui os seguintes atributos e métodos:
-
-#### Atributos
-- `contas`: Lista de contas do banco.
-- `clientes`: Lista de clientes do banco.
-
-#### Métodos
-- `consultarConta(numero: string)`: Retorna a conta com o número fornecido.
-- `consultarCliente(cpf: string)`: Retorna o cliente com o CPF fornecido.
-- `associarContaCliente(numeroConta: string, cpfCliente: string)`: Associa uma conta a um cliente.
-- `listarContasCliente(cpf: string)`: Retorna a lista de contas de um cliente.
-- `totalizarSaldoCliente(cpf: string)`: Retorna o saldo total das contas de um cliente.
-- `inserirCliente(cliente: Cliente)`: Insere um cliente no banco.
-- `inserirConta(conta: Conta)`: Insere uma conta no banco.
-- `getClientes()`: Retorna a lista de clientes do banco.
-- `getContas()`: Retorna a lista de contas do banco.
-
-### Questão 04
-**Regras de Negócio do Banco**
-- **A**: Cada cliente pode ter várias contas, mas uma mesma conta não pode ser associada mais de uma vez ao mesmo cliente.
-- **B**: Cada conta só pode ser associada a um único cliente.
-- **C**: O sistema deve impedir duplicações:
-  - **i**: Nenhum cliente pode ter o mesmo id ou cpf de outro cliente.
-  - **ii**: Nenhuma conta pode ter o mesmo id ou numero de outra conta.
-
-### Questão 05
-**Exemplos de Funcionalidades das Classes**
-O arquivo `main.ts` contém exemplos de como utilizar as funcionalidades das classes `Cliente`, `Conta` e `Banco`. Nele, são criados clientes e contas, e são realizadas operações como associar contas a clientes e listar contas de um cliente.
-
-
-### Questão 06
-**Discussão sobre a Classe Banco**
-- **A**: Sim, a classe `Banco` é responsável por centralizar todas as outras classes do sistema.
-- **B**: Sim, seria mais adequado a existência das classes `CadastroDeClientes` e `CadastroDeContas`. Assim, as tarefas relacionadas ao cadastro de clientes e contas poderiam ser delegadas a essas classes, facilitando as tarefas que a classe `Banco` possui.
-- **C**: Acho que o método `associarContaCliente` deveria estar na classe `CadastroDeContas`, pois está mais relacionado à criação de uma conta em si, e pensando nas regras de negócio faria mais sentido ainda.
+**Nota:** Estes projetos foram desenvolvidos para fins educacionais e podem não incluir todas as funcionalidades e boas práticas de um sistema de produção.
