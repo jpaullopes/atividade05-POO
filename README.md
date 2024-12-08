@@ -1,6 +1,11 @@
 # Projetos Acadêmicos
 
+<<<<<<< HEAD
 Este repositório contém dois projetos desenvolvidos como parte de atividades acadêmicas. Ambos os projetos são implementações simples em TypeScript para fins educacionais.
+=======
+## Descrição
+Este projeto simula um sistema bancário simples com funcionalidades para gerenciar clientes, contas e operações bancárias. O projeto é resultado de uma atividade acadêmica.
+>>>>>>> aef93d99094aa449dac1fa005c6552f726f68f41
 
 ## [Projeto Banco](./banco/README.md)
 
