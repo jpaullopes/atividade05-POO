@@ -1,6 +1,5 @@
 # Projetos Acadêmicos
 
-HEAD
 Este repositório contém dois projetos desenvolvidos como parte de atividades acadêmicas. Ambos os projetos são implementações simples em TypeScript para fins educacionais.
 ---
 ## Descrição
