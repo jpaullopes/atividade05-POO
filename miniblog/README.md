@@ -51,8 +51,6 @@ Isso deve exibir a saída dos testes realizados no console.
 
 ## Conclusão
 Este projeto é uma implementação simples de um sistema de microblogging em TypeScript. Ele demonstra o uso de classes, métodos, atributos, arrays e operações básicas em TypeScript. Para projetos mais complexos, seria necessário adicionar mais funcionalidades, como validações, tratamento de erros, persistência de dados, interface gráfica, etc.
-```
-```
 
 ### [Código-fonte](src/main.ts)
 Clique [aqui](src/main.ts) para acessar o código-fonte.
